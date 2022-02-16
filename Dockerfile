@@ -1,4 +1,6 @@
 FROM python:latest
 COPY . .
-EXPOSE 6001
-ENTRYPOINT [ "python3","app.py" ]
+RUN pip3 install flask
+RUN pip install requests
+EXPOSE 8000
+ENTRYPOINT [ "python3","Sample.py" ]
